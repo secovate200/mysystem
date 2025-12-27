@@ -12,24 +12,138 @@
   </head>
   <body>
     <nav class="nav">
-      <i class="bx bx-menu navOpenBtn"></i>
-      <a href="#" class="logo">Secovate200</a>
-      <ul class="nav-links" id="nav-links">
-        <i class="bx bx-x navCloseBtn"></i>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Logout</a></li>
-        <li><a href="#">Dashboard</a></li>
-      </ul>
-      <i class="bx bx-search searchIcon" id="searchIcon"></i>
-      <div class="searchBox">
-        <i class="bx bx-search searchIcon"></i>
-        <input type="text" placeholder="Search here..." />
+      <div class="nav-container">
+        <i class="bx bx-menu navOpenBtn"></i>
+        <a href="#" class="logo">Secovate200</a>
+
+        <ul class="nav-links" id="nav-links">
+          <i class="bx bx-x navCloseBtn"></i>
+          <li><a href="#">Home</a></li>
+          <li><a href="./login.html">Login</a></li>
+          <li><a href="#">Logout</a></li>
+          <li><a href="#">Dashboard</a></li>
+        </ul>
+
+        <i class="bx bx-search searchIcon" id="searchIcon"></i>
+
+        <div class="searchBox">
+          <i class="bx bx-search searchIcon"></i>
+          <input type="text" placeholder="Search here..." />
+        </div>
       </div>
     </nav>
 
-    <main></main>
+    <main class="blog-wrapper">
+      <section class="blog-content">
+        <article class="post-item">
+          <div class="post-meta">
+            <span class="category">Bug Bounty</span>
+            <span class="date">Dec 27, 2025</span>
+          </div>
+          <h2 class="post-title">
+            <a href="#">Exploiting IDOR vulnerabilities in API endpoints</a>
+          </h2>
+          <p class="post-desc">
+            Insecure Direct Object References (IDOR) occur when an application
+            provides direct access to objects based on user-supplied input. This
+            post demonstrates how to detect them using Burp Suite.
+          </p>
+          <div class="post-tags">
+            <span>#WebHacking</span>
+            <span>#API</span>
+            <span>#Security</span>
+          </div>
+        </article>
+
+        <article class="post-item">
+          <div class="post-meta">
+            <span class="category">Development</span>
+            <span class="date">Dec 25, 2025</span>
+          </div>
+          <h2 class="post-title">
+            <a href="#">Hardening Docker Containers for Production</a>
+          </h2>
+          <p class="post-desc">
+            Container security is often overlooked. Here are my top 5 tips for
+            hardening your Docker environment against privilege escalation
+            attacks and ensuring isolation.
+          </p>
+          <div class="post-tags">
+            <span>#Docker</span>
+            <span>#DevOps</span>
+            <span>#Linux</span>
+          </div>
+        </article>
+
+        <article class="post-item">
+          <div class="post-meta">
+            <span class="category">Research</span>
+            <span class="date">Dec 20, 2025</span>
+          </div>
+          <h2 class="post-title">
+            <a href="#">Deep Dive into Heap Overflow Mechanics</a>
+          </h2>
+          <p class="post-desc">
+            Understanding dynamic memory allocation in C is crucial. We will
+            explore how heap chunks are structured and how they can be
+            manipulated to achieve code execution.
+          </p>
+          <div class="post-tags">
+            <span>#Pwnable</span>
+            <span>#C-Lang</span>
+            <span>#Exploit</span>
+          </div>
+        </article>
+
+        <article class="post-item">
+          <div class="post-meta">
+            <span class="category">CTF Writeup</span>
+            <span class="date">Dec 15, 2025</span>
+          </div>
+          <h2 class="post-title">
+            <a href="#">DreamHack CTF: Web Challenge Analysis</a>
+          </h2>
+          <p class="post-desc">
+            A walkthrough of the recent web hacking challenges. Focusing on SQL
+            Injection bypass techniques and server-side template injection
+            (SSTI).
+          </p>
+          <div class="post-tags">
+            <span>#CTF</span>
+            <span>#Writeup</span>
+            <span>#Web</span>
+          </div>
+        </article>
+
+        <div class="load-more-area">
+          <button class="btn-load-more">Load More Posts</button>
+        </div>
+      </section>
+
+      <aside class="blog-sidebar">
+        <div class="sidebar-widget about-me">
+          <div class="profile-img-box">
+            <i class="bx bxs-user-circle"></i>
+          </div>
+          <div class="profile-info">
+            <h3 class="profile-name">Secovate200</h3>
+            <p class="profile-role">White-hat Hacker & Dev</p>
+            <p class="profile-bio">
+              Analyzing vulnerabilities and building secure systems. Welcome to
+              my research logs.
+            </p>
+
+            <div class="social-links">
+              <a href="#" aria-label="Github"><i class="bx bxl-github"></i></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="bx bxl-twitter"></i
+              ></a>
+              <a href="#" aria-label="Email"><i class="bx bxs-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
 
     <script src="scripts.js"></script>
   </body>
