@@ -1,0 +1,67 @@
+/* 1. 기본 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  overscroll-behavior: none;
+}
+body {
+  /* 시스템 폰트 사용 (성능 최적화) */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 2. 레이아웃 구역 시각화 */
+
+/* 헤더 */
+.layout-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #e0e0e0;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+  min-height: 80px; /* 내용이 없어도 헤더 영역이 보이도록 최소 높이 설정 */
+}
+
+/* 메인 바디 여백 */
+.layout-body {
+  padding: 40px 0;
+  min-height: 1000px; /* 스크롤 테스트를 위해 임시로 높이를 넉넉히 줌 */
+}
+
+/* 메인 컨텐츠 박스 */
+.box-content {
+  background-color: #f0f8ff; /* 연한 파랑 */
+  border: 1px dashed #007bff;
+  min-height: 800px; /* 스크롤이 발생해야 사이드바 고정 효과가 보임 */
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #007bff;
+  flex-direction: column; /* 텍스트 정렬용 */
+}
+
+/* 사이드바 박스 (Sticky 적용) */
+.box-sidebar {
+  background-color: #fff0f5; /* 연한 분홍 */
+  border: 1px dashed #dc3545;
+  min-height: 200px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #dc3545;
+
+  /* 핵심 코드: 스크롤 시 따라오게 설정 */
+  position: -webkit-sticky; /* 사파리 브라우저 호환 */
+  position: sticky;
+  top: 100px; /* 화면 상단에서 20px 떨어진 곳에 고정 */
+}
