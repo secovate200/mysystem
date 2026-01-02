@@ -2,43 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Layout Skeleton</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secovate200's World</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body>
-    <header class="layout-header">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-3 col-6"></div>
-          <div class="col-md-9 col-6"></div>
+    <header>
+      <nav class="nav">
+        <i class="bx bx-menu navOpenBtn"></i>
+        <a href="#" class="logo">Secovate</a>
+        <ul class="navLinks">
+          <i class="bx bx-x navCloseBtn"></i>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Category</a></li>
+        </ul>
+
+        <i class="bx bx-search searchIcon" id="searchIcon"></i>
+        <div class="searchBox">
+          <i class="bx bx-search searchIcon"></i>
+          <input type="text" placeholder="Search here... " />
         </div>
-      </div>
+      </nav>
     </header>
+    <main class="blog-wrapper">
+      <section class="blog-post">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas facere
+        iusto voluptatem corrupti fugit soluta id minima, reprehenderit porro
+        quod nobis delectus quo? Incidunt odit laudantium rerum repudiandae
+        iusto tempore.
+      </section>
+      <aside class="sidebar">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt corrupti,
+        eum iste vel tempore illo velit saepe dolores consequuntur odio, quam
+        alias voluptatibus id! Beatae rem ratione neque libero consectetur.
+      </aside>
+    </main>
 
-    <div class="layout-body">
-      <div class="container">
-        <div class="row">
-          <main class="col-lg-8">
-            <div class="box-content">
-              MAIN CONTENT AREA
-              <br />(Post List, Details, etc.) <br /><br /><br /><br /><br />
-              (Scroll Down to test Sticky Sidebar)
-            </div>
-          </main>
-
-          <aside class="col-lg-4">
-            <div class="box-sidebar">
-              SIDEBAR AREA
-              <br />(Fixed on Scroll)
-            </div>
-          </aside>
-        </div>
-      </div>
-    </div>
-
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

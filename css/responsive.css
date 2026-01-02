@@ -1,66 +1,100 @@
-@media screen and (max-width: 1199px) {
-    .blog-sidebar {
-        margin-top: 50px;
-    }
+@media screen and (max-width: 1160px) {
+  .nav {
+    padding: 15px 100px;
+  }
+  .nab .searchBox {
+    position: absolute;
+    right: 150px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .nav {
+    padding: 15px 50px;
+  }
+
+  .nav .searchBox {
+    right: 100px;
+    max-width: 400px;
+  }
+  .blog-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .blog-wrapper .blog-post {
+    width: 100%;
+    background: red;
+  }
+  .blog-wrapper .sidebar {
+    width: 100%;
+    background: green;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav .navLinks {
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    max-width: 280px;
+    width: 100%;
+    padding-top: 100px;
+    row-gap: 30px;
+    background: var(--second-bg-color);
+    transition: all 0.4s ease;
+    z-index: 100;
+  }
+  .nav.openNav .navLinks {
+    left: 0;
+  }
+  .nav .navCloseBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text-color);
+  }
+  .nav .navOpenBtn {
+    color: var(--text-color);
+    cursor: pointer;
+  }
+  .nav .navOpenBtn,
+  .nav .navCloseBtn {
+    display: block;
+  }
+  .nav .searchBox {
+    top: calc(100% + 10px);
+    max-width: calc(100% - 20px);
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+/* 기존 코드 생략... */
+
+/* 950px 이하일 때 컨테이너 여백 조정 */
+@media screen and (max-width: 950px) {
+  .container {
+    padding: 0 50px;
+  }
 }
 
-@media screen and (max-width: 991px) {
-    .feature-text h2 {
-        font-size: 36px;
-    }
+/* 768px 이하 (태블릿 및 모바일) */
+@media screen and (max-width: 768px) {
+  /* ... 기존 nav 관련 코드 ... */
 
-    .feature-text p {
-        display: none;
-    }
-}
+  .container {
+    flex-direction: column; /* 세로 배치로 변경 */
+    padding: 0 20px;
+    margin-top: 20px;
+  }
 
-@media screen and (max-width: 767px) {
-    .feature-text {
-        padding: 30px;
-    }
+  .content,
+  .sidebar {
+    width: 100%; /* 너비를 꽉 채움 */
+  }
 
-    .feature-text h2 {
-        font-size: 24px;
-    }
-
-    .feature-post-btn {
-        padding: 12px 20px;
-    }
-
-    .copyright-text {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .footer-social {
-        text-align: center;
-    }
-
-    .blog-details .blog-text h2 {
-        font-size: 28px;
-    }
-
-    .blog-details-contact-form h2 {
-        font-size: 28px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .container {
-        max-width: 400px;
-    }
-    
-    .feature-text h2 {
-        font-size: 18px;
-    }
-
-    .feature-text p {
-        font-size: 13px;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .main-menu ul li {
-        margin-left: 18px;
-    }
+  .sidebar {
+    order: 2; /* 사이드바가 메인 아래로 오도록 설정 */
+  }
 }
